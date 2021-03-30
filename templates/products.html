@@ -1,0 +1,16 @@
+{%extends 'layout.html' %}
+{% block body %}
+<h2>Products</h2>
+<ul class="list-group" >
+    {% if products != null %}
+    {% for item in products %}
+    <li><h1><a href="/single_p/{{item.id}}" > {{item.p_name}}  </a></h1>
+    | <h2>Authur {{item.added_by}}</h2>
+    </li> 
+    {% endfor %}
+    {% else %}
+        <div class="alert alert-danger text-center">{{msg}}</div>
+
+    {% endif %}
+</ul>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<div class="jumbotron">
+
+  <h1>{{s_prod.p_name}}</h1>
+  <small>Added By {{s_prod.added_by}} on  {{s_prod.reg_date }}</small>
+  
+  <hr>
+<div>
+  {{s_prod.p_desc | safe}} 
+</div>
+</div>
+
+{% endblock %}
